@@ -65,6 +65,13 @@ function search_list_sessao(){
             closeButton    +=  '</button>';
         $('#results').append(closeButton);
     });
+    
+    $('.testimonial').each(function(i, obj) {
+        savedVideos.forEach(function(element) {
+            if(element.videoid == obj.getAttribute('id'))
+                obj.checked = true;     
+        });
+    });
 }
 
 
