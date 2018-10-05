@@ -85,6 +85,7 @@ function UpdateObsearvacao(){
     var fd = "sessaoID="+sessaoID+"&reconhecimento="+reconhecimento+"&humor="+humor+"&interesse="+interesse+"&interaccao="+interaccao+"&nauseas="+nauseas+"&desequilibrios="+desequilibrios+"&perturbacoes_visuais="+olhos+"&observacoes="+observacoes+"&cuidadorID="+cuidadorID;
    
     xhttp.send(fd);
+    resetModalSessao();
 }
 
 function endSession()

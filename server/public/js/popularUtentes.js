@@ -297,8 +297,7 @@ $( document ).ready(function() {
 function validateNewPatient(){
     if ($('#prmeiroNome').val().length   >=   2   &&
         $('#ultimoNome').val().length  >=   2   &&
-        $.isNumeric($('#idade').val()) &&
-        $('#obs').val().length > 0) {
+        $.isNumeric($('#idade').val())) {
         $('#addpatient').prop("disabled", false);
     }
     else {
