@@ -1,0 +1,277 @@
+
+/******************** LOADING ********************/
+
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #7e7e7e;
+  border-radius: 50%;
+  border-top: 16px solid #f5dbcf;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 0.5s linear infinite;
+  animation: spin 0.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/******* tamanho letras do content dos videos ******/
+
+@media (max-width: 425px){
+    .title_video{
+        font-size: 13px;
+    }
+    .thumbnail_image{
+        width: 110%;
+        height: 110%;
+    }
+}
+
+@media (max-width: 992px){
+    #results{
+        width: inherit;
+    }
+}
+
+
+/**************************************/
+/***************************************/
+/************************************/
+
+
+/********************BODY*************/
+
+body {
+ /* padding-top: 58px;*/
+    background-color: #343A40;
+}
+
+body html{
+	height: 100%;
+}
+
+
+
+/**************************** NAVBAR ********************************/
+.navbar-nav > li > a{
+    color: #f5dbcf;
+    font-family: 'Muli';  
+}
+
+/* Mais espaço entre as opções do menu */
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.navbar{
+    -webkit-box-shadow: 0 8px 20px -6px black;
+	   -moz-box-shadow: 0 8px 20px -6px black;
+	        box-shadow: 0 8px 20px -6px black;
+    margin: auto;
+    
+}
+
+.navbar-text{
+    position: relative;
+    width: 50%;
+    left: 0;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+    font-family: 'Chonburi';
+    color: #f5dbcf !important;
+    font-size: 100%;
+    vertical-align: text-top;
+}
+
+.textuser:hover{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+#logout{
+    font-family: 'Muli' !important;
+    color: white !important;
+}
+#logout:hover{
+    color: #f5dbcf !important;
+    text-decoration: none;
+}
+.bread {
+    color: #3f3f3f !important;
+}
+.bread:hover{
+    text-decoration: none !important;
+    color: white !important;
+}
+
+
+@media (min-width: 768px) {
+    .navbar-text{
+         position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin: auto;
+        padding-top: 10px;
+        font-family: 'Chonburi';
+        color: #f5dbcf !important;
+        font-size: 200%;
+    }
+
+}
+/*********************************************************************/
+
+/********************************** BOTAO LOGOUT ***********************/
+
+.dropdown-menu {
+    background-color: rgba(255,255,255,0.5);
+     
+}
+.dropdown-menu li a{
+   color: white !important;
+    text-align: right !important;
+}
+
+.dropdown-menu li{
+    /*margin-right: 21px;*/
+    text-align: center !important;
+    font-size: 120%;
+}
+/***************************************************************/
+
+/* Setinha ao lado do login*/
+/*.dropdown-toggle::after {
+    display:none;
+}*/
+/***************************/
+
+/**************************** BREADCRUMB *****************************/
+/*
+.breadcrumb {
+margin-bottom: 0px !important;
+padding-left: 2px;
+padding-right: 5px;
+background-color: transparent !important;
+
+
+}
+.breadcrumb li > a{
+    text-decoration: none;
+    color: #f5dbcf;
+    font-family: 'Muli';
+}
+*/
+
+/** The Magic **/
+.btn-arrow-right {
+    text-align:center;
+    vertical-align:middle;
+    position: relative;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 0px;
+    padding-top: 2px;
+    height: 32px; /* button_outer_height / sqrt(2) */
+    background: #f5dbcf;
+    font-family: 'Muli';
+    color: #3f3f3f;
+    
+    
+}
+
+
+
+
+button:focus {outline: none !important;}
+
+.btn-arrow-right {
+    padding-left: 36px;
+  
+}
+
+.btn-arrow-right:before,
+.btn-arrow-right:after { /* make two squares (before and after), looking similar to the button */
+    content:"";
+    position: absolute;
+    top: 5px; /* move it down because of rounded corners */
+    width: 22px; /* same as height */
+    height: 22px; /* button_outer_height / sqrt(2) */
+    background: #f5dbcf;
+    border: none;
+   
+
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+    transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+
+.btn-arrow-right:before { /* align the "before" square to the left */
+    left: -11px;
+}
+.btn-arrow-right:after { /* align the "after" square to the right */
+    right: -11px;
+}
+.btn-arrow-right:after { /* bring arrow pointers to front */
+    z-index: 1;
+}
+.btn-arrow-right:before { /* hide arrow tails background */
+    background-color: #343A40; /*mesma cor que o fundo*/
+}
+
+/********************* BOTOES POPUP ************************/
+
+/* css para o popup do registo */
+.success-popup  {
+    transition: .3s ease all;
+    font-family: 'Muli';
+    color: #7e7e7e;
+}
+
+.button-popup-success {
+    font-family: 'Muli';
+    background: white;
+    outline: 2px solid #009b00; 
+    color: #3f3f3f;
+}
+
+.button-popup-success:hover {
+    background: white;
+    outline: 5px solid #009b00;
+    color: #3f3f3f;
+}
+.button-popup-fail {
+    font-family: 'Muli';
+    background: white;
+    outline: 2px solid #d60000; 
+    color: #3f3f3f;
+}
+
+.button-popup-fail:hover {
+    background: white;
+    outline: 5px solid #d60000;
+    color: #3f3f3f;
+}

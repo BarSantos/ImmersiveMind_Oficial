@@ -1,0 +1,112 @@
+#header{
+    /*position: absolute;*/
+   text-shadow: 0 0 0.2em #f1cbff, 0 0 0.2em #f1cbff;
+	
+	/*background-image: url("../images/space.jpg");*/
+    
+	/*background-size: cover;*/
+	/*background-position: bottom;*/
+	
+	
+    width: 100%; /* make sure to define width to fill container */
+    height: 100px; /* define the height in pixels or make sure   */
+                   /* you have something in your div with height */
+                   /* so you can see your image */
+   /* max-width:1400px;  /* define the max width */
+}
+
+.userlogin{ 
+    width: 70px;
+    height: 70px;
+    background: url(../icons/user_login.svg);
+    background-size: 100%;
+   background-repeat: no-repeat;
+    resize:both;
+   border: none;
+    position:absolute;
+    top:15px;
+   right:20px;
+}
+
+#text-title {
+	font-family: 'Passion One', cursive;
+	letter-spacing: 5px;
+	text-align: left;
+	margin-left: 10px;
+	text-transform: uppercase;
+	color: white;
+}
+
+h1{
+font-size: 100px;
+margin-top:0px;
+}
+
+body{
+    background-image: url("../images/space_gaussian.jpg");
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    /*padding: 10px;*/
+   
+    text-align: center;
+}
+
+.column-small {
+    float: left;
+    width: 50%;
+    /*padding: 10px;*/
+    text-align: center;
+}
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;   
+}
+
+.row{
+    width:101.1%;
+    float: initial;
+}
+
+/* Buttons*/
+
+.btn {
+    background-color: Transparent;
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  border: solid #f1cbff 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #f1cbff;
+  text-decoration: none;
+}
+
+.active, .btn:hover {
+    background-color: #f1cbff;
+    color: gray;
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+   /* .column {
+        width: 100%;
+    }
+    .column-small {
+        width: 100%;
+    }
+    */
+    body{
+        width: 100%;
+    }
+}

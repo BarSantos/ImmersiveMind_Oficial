@@ -1,0 +1,516 @@
+h3 {
+    margin-bottom: 0px !important;
+    font-family: 'Muli';
+    color: #f5dbcf;
+}
+
+h3:hover{
+    color: #f9ebe4;
+}
+.rect_utentes:hover{
+    text-decoration: none !important;
+}
+
+.rect{
+    width:300px; 
+    height:200px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+}
+
+
+.rect:hover{
+    text-decoration: none !important;
+    -webkit-filter: brightness(110%);
+}
+
+.rect_plus{
+    background-image:url(../images/plus_sign_cool.png);
+    width:300px; 
+    height:200px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: center center;
+    -webkit-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+}
+
+
+.rect_plus:hover{
+    /*background-image:url('../images/plus_sign_cool_pressed.png');*/
+    -webkit-filter: brightness(110%);
+}
+
+/*********************** popup do plus **************************/
+.modal-titulo{
+    font-family: 'Muli';
+    color: #7e7e7e;
+}
+
+.modal-body{
+    font-family: 'Muli';
+}
+
+/*****************************Opção Procurar *********************/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background: #7e7e7e;
+    border: #7e7e7e;
+    color: white;
+}
+
+.btn-file:hover {
+    background: #f5dbcf;
+    color: #3f3f3f;
+    border: #f5dbcf;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.box-img{
+    background: rgba(255,255,255,0) !important;
+}
+
+.btn-add {
+    position: relative;
+    overflow: hidden;
+    background: #7e7e7e;
+    border: #7e7e7e;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #f5dbcf;
+    color: #3f3f3f;
+    border: #f5dbcf;
+}
+
+/**** Preview da imagem no novo utente *****/
+.rect_preview{
+    width:300px !important; 
+    height:200px !important;
+    background-repeat:no-repeat !important;
+    background-size: cover !important;
+    background-position: center center;
+}
+
+/****** Modificação do Modal ******/
+.modal-header
+ {
+     padding:9px 15px;
+     border-bottom:0px solid #3f3f3f;
+     background-color: #f5dbcf;
+ }
+
+.modal-title{
+    text-align: center !important;
+}
+ .modal-header .close{
+    position: inherit;
+}
+
+.modal-footer{
+    border-top: 1px solid #7e7e7e;
+}
+
+/***************** TABS NO MODAL *****************/
+
+a:focus {
+    outline: none !important;
+}
+.nav-tabs>li>a{
+    border: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0px solid #7e7e7e !important;
+    background-color: rgba(255,255,255,0) !important;
+    font-family: 'Muli'; 
+    font-size: 25px;
+    margin-bottom: -2px;
+    color: #afafaf !important;
+}
+
+.nav-tabs>li>a.active{
+    border-bottom: 4px solid  white !important;
+    color: #3f3f3f !important;
+}
+
+
+.nav-tabs>li>a:hover{
+    border-bottom: 4px solid white !important;
+    color: #3f3f3f !important;
+    
+}
+
+
+@media (max-width: 502px) {
+    .nav-tabs>li>a{
+        font-size: 23px;
+    }
+
+}
+
+@media (max-width: 474px) {
+    .nav-tabs>li>a{
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 431px) {
+    .nav-tabs>li>a{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 407px) {
+    .nav-tabs>li>a{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 379px) {
+    .nav-tabs>li>a{
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 349px) {
+    .nav-tabs>li>a{
+        font-size: 12px;
+    }
+
+}
+
+@media (max-width: 322px) {
+    .nav-tabs>li>a{
+        font-size: 11px;
+    }
+
+}
+
+/*
+, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover*/
+/*.nav-tabs>li>a:hover{
+  border: 1px solid transparent;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+	background-color: #d4d4d4;
+}
+
+.nav-tabs{
+    border-bottom: none; /* needed to center the list items */
+
+
+input[type="date"]
+{
+    font-family: 'Muli';
+}
+
+/*Tamanho dos botões da sessao (no editar porque são 4)*/
+.btn-size-terminar-cancelar{
+    font-size: 14px;
+    text-align: center;
+    padding-left: 10px !important;
+    
+}
+.btn-size{
+    font-size: 14px;
+    text-align: center;
+}
+
+/***** Botão iniciar no modal das sessões ******/
+.button-popup-success-iniciar {
+    font-family: 'Muli';
+    background-color: #009b00;
+    outline: 2px solid #009b00; 
+    color: white;
+    border-radius: 0 !important;
+}
+
+.button-popup-success-iniciar:hover {
+    background-color: #66c366;
+    outline: 5px solid #66c366;
+}
+
+/*************************** CHECKBOX DOS VÍDEOS *************************/
+
+/* The container */
+.container_text {
+    display: block;
+    position: relative;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container_text input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #eee;
+    border-style: solid;
+    border-color: #3f3f3f;
+    
+}
+
+/* On mouse-over, add a grey background color */
+.container_text:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_text input:checked ~ .checkmark {
+    background-color: #009b00;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container_text input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_text .checkmark:after {
+    font-size: 30px;
+    left: 8px;
+    /*top: 5px;*/
+    width: 10px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/************************ STYLE DOS VÍDEOS *****************************/
+
+.item{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
+    text-align: center;
+}
+
+.thumbnail_search{
+    width: 200px !important;
+    height: 144px;
+    max-height: 360px;
+    max-width: 480px;
+}
+
+
+.thumbnail_my_videos{
+    width: 150px !important;
+    height: 100px;
+    max-height: 150px;
+    max-width: 150px;
+}
+
+@media (max-width: 768px){
+    .thumbnail_my_videos{
+        width: 100px !important;
+        height: 60px;
+        max-height: 150px;
+        max-width: 150px;
+    }
+}
+
+.col6_thumbnail_my_videos{
+    width: 150px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col12_thumbnail{
+    width: 210px !important;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.col12_text{
+    width: 200px !important;
+    padding-left: 3px;
+    padding-right: 0px;
+}
+
+
+.titlesearch{
+    color: #3f3f3f;
+    width: 200px !important;
+    padding:5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Muli';
+    max-width: 200px;
+    text-align: left;
+}
+
+/*********************** OBSERVAÇÕES *************************/
+
+input[type=radio] {
+    display: block;
+    margin: 0 auto; 
+}
+
+label {
+    display: inline-block;
+}
+                        
+.radio-inline{
+    text-align: center;
+    font-size: 15px;
+}
+.checkbox-inline{
+    text-align: center;
+    font-size: 15px;
+}
+                        
+                        
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+/*** Tamanhos das letras ***/
+
+@media (max-width: 495px){
+    #ObservacoesRelevantes{
+        font-size: 12px;
+    }
+    .checkbox-inline2{
+        font-size: 12px;
+    }
+    .radio-inline{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px){
+    #ObservacoesRelevantes{
+        font-size: 10px;
+    }
+    .checkbox-inline2{
+        font-size: 10px;
+    }
+    .radio-inline{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 379px){
+    #dados-sessao{
+        font-size: 14px;
+    }
+    #obs-sessao{
+        font-size: 14px;
+    }
+}
+
+/***** Tab Balanço final *****/
+.disabled {
+    pointer-events:none; /*This makes it not clickable*/
+    opacity:0.6;         /*This grays it out to look disabled*/
+}
+
+/********* Na procura de videos **********/
+
+@media (max-width: 768px){
+    .textsmaller{
+        font-size: 14px;
+    }
+}
+
+/************* Btao procurar *********/
+
+.input-group-text{
+    background-color: #7e7e7e;
+    color: white;
+    
+}
+.input-group-text:hover{
+    background-color: #f5dbcf;
+    color: #7e7e7e;
+    -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  /* ...and now for the proper property */
+  transition:.3s;
+}

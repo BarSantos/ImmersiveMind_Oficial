@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "This is the server of ImmersiveMind",
+  "main": "ImmersiveMindServer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Therapy",
+    "ImmersiveMind"
+  ],
+  "author": "Barbara Santos",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "crypto-js": "^3.1.9-1",
+    "deferred": "^0.7.9",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "q": "^1.5.1",
+    "request": "^2.88.0"
+  }
+}

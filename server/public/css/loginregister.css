@@ -1,0 +1,17 @@
+#header{
+    /*position: absolute;*/
+   text-shadow: 0 0 0.2em #f1cbff, 0 0 0.2em #f1cbff;
+}
+
+body{
+    background-image: url("../images/space_gaussian.jpg");
+}
+
+#text-title {
+	font-family: 'Passion One', cursive;
+	letter-spacing: 5px;
+	text-align: left;
+	margin-left: 10px;
+	text-transform: uppercase;
+	color: white;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>ImmersiveMind</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="/js/server.js"></script>
+        <script src="/js/popularUtentes.js"></script>
+
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+        
+        
+        <!-- Bootstrap core CSS -->
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap Validator -->
+        <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.1.3/dist/bootstrap-validate.js" ></script>
+    
+        <!-- Custom styles for this template -->
+        <link href="/css/managepatients.css" rel="stylesheet">
+        <link href="/css/transversal.css" rel="stylesheet">
+    
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+
+          <!-- Fontes -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Chonburi');
+            @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+            @import url('https://fonts.googleapis.com/css?family=Passion+One');
+            @import url('https://fonts.googleapis.com/css?family=Muli');
+        </style>
+
+    </head>
+
+    <body>
+               <div id="loader"></div>
+      <div style="display:none;" id="allPageActivity">
+         <!-- ***********************************************NAVBAR E TRALHA*************************************************** -->
+    <!-- Navigation -->
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand py-0" href="frontpage">  <img class="img-responsive" width="50px" height="" src="images/brain-logo-off.png"></a>
+            <p class="navbar-text text-uppercase">ImmersiveMind</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" style="z-index: 1" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span> </button>
+    
+              <!-- Aqui começam as opções do menu -->    
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                        <li class="dropdown">
+                            <a href="#" id="primeiroultimonome" class="dropdown-toggle textuser" data-toggle="dropdown">Olá, Ana Li <b class="caret"></b></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#" id="logout" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+ 
+        <!-- Popup do LOGOUT -->
+        <div class="modal fade success-popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Sair de ImmersiveMind?</h4>
+                </div>
+                <div class="modal-body text-center">
+
+
+                    <img class="img-responsive center" width="100px" height="" src="images/brain-logo-off-inverted.png">
+                <p></p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <button data-dismiss="modal" class="btn btn-default btn-lg btn-block button-popup-success">Ficar :)</button> 
+                        </div>
+                        <div class="col-sm-6">
+                            <button data-dismiss="modal" onclick="Logout()" class="btn btn-default btn-lg btn-block button-popup-fail">Sair :(</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--page Content --> 
+        <div class="container-fluid">
+    
+            <!-- BREADCRUMB-->
+
+            <div class="btn btn-default btn-arrow-right"><a href="frontpage"><i class="fas fa-home bread"></i></a></div>
+            <div class="btn btn-default btn-arrow-right"><a href="" class="bread">Gerir Utentes</a></div>
+            <!--<div class="btn btn-default btn-arrow-right">Danger</div>-->
+        
+ <!-- ******************************************************************************************************************* -->
+
+        <!-- Team Members Row -->
+            <p></p>
+        <div class="row" id="rowbolinhas">
+           <!--<div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center mb-4">
+              <img class="rounded-circle img-fluid d-block mx-auto" src="http://placehold.it/200x200" alt="">
+              <h3>John Smith
+              </h3>
+            </div>-->
+          </div>
+
+    </div>
+ <!-- /.container -->
+
+<!------------------------- Popup do Plus --------------------------->
+    <div class="modal fade popup-plus" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 class="modal-title w-100 font-weight-bold modal-titulo" id="utente-titulo">Novo Utente</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="resetModalDoente()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="formaddpatient">
+                <div class="form-group">
+                    <label for="inputprinome">Primeiro nome</label>
+                    <input type="text" id="prmeiroNome" class="form-control" placeholder="p.e.: Amália">
+                </div>
+                <script>bootstrapValidate('#prmeiroNome', 'min:2:Escreva um nome válido!');</script>
+                
+                <div class="form-group">
+                    <label for="inputultnome">Último nome</label>
+                    <input type="text" id="ultimoNome" class="form-control" placeholder="p.e.: Rodrigues">
+                </div>
+                <script>bootstrapValidate('#ultimoNome', 'min:2:Escreva um nome válido!');</script>
+                
+                <div class="form-group">
+                    <label for="inputidade">Idade</label>
+                    <input type="number" id="idade" class="form-control" placeholder="p.e.: 98">
+                </div>
+                <script>bootstrapValidate('#idade', 'integer:Introduza uma idade válida!');</script>
+                
+                <div class="form-group">
+                    <label for="inputidade">Observações relevantes</label>
+                    <textarea type="text" id="obs" class="form-control" rows="3" placeholder="Tem algum tipo de demência? Problemas de visão/audição? Gostos?"></textarea>
+                </div>
+                <script>bootstrapValidate('#obs', 'required:Preencha este campo!');</script>
+                
+                <div class="form-group">
+                    <label>Escolha uma imagem</label>
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-default btn-file"><i class="fas fa-search"></i> 
+                            Procurar...<input type="file" id="imgInp">
+                            </span>
+                        </span>
+                        <input type="text" class="form-control box-img" id="imagelabel" readonly>
+                    </div>
+                    <p></p>
+                        <img class="rounded-circle img-fluid bolita_preview d-block mx-auto" id='img-upload' style="background-image: url(images/bolinhas_default.png)"/>
+                </div>
+
+            </div>
+            <div class="modal-footer d-flex justify-content-center">
+                <div class="row">
+                        <div class="col-sm-6" id="botaoAdicionar">
+                           <button data-dismiss="modal" onclick="AddPatient()" class="btn btn-default btn-lg btn-block button-popup-success" disabled="true" id="addpatient"><i class="fas fa-plus-circle"></i> Adicionar</button> 
+                        </div>
+                        <div class="col-sm-4" style="display: none;" id="botaoApagar">
+                            <button data-dismiss="modal" onclick="DeleteDoente()" class="btn btn-default btn-lg btn-block button-popup-fail" ><i class="fas fa-trash-alt"></i> Apagar</button>
+                        </div>
+                        <div class="col-sm-6" id="botaoCancelar">
+                            <button data-dismiss="modal" onclick="resetModalDoente()" class="btn btn-default btn-lg btn-block button-popup-fail"><i class="fas fa-times-circle"></i> Cancelar</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+ 
+  </body>
+</html>

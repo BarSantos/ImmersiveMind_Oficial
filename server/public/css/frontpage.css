@@ -1,0 +1,55 @@
+.card-deck{
+    margin-bottom: 0px;
+    /*position:absolute;*/
+}
+
+
+.card {
+	border: none;
+	font-family: 'Muli';
+}
+
+.card a{
+    text-decoration: none;
+    color: #7e7e7e;
+    font-weight: bold;
+}
+
+.card:hover .card-img-top
+{
+	opacity: 0.5;
+	filter: alpha(opacity=30);
+     -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.card:hover .card-body{
+    background:#f5dbcf;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.card:hover a{
+    color: #3f3f3f;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.card-title {
+	color: #7e7e7e;
+	text-align: center;
+}
+
+.card-text {
+	 text-align: justify;
+}
+	
+@media (min-width: 768px) {
+
+}

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>ImmersiveMind</title>
+        
+        <script src="https://www.youtube.com/iframe_api"></script>
+        <script src="/js/search.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+        <script src="/js/server.js"></script>
+       
+        <script src="/js/observacoes.js"></script>
+        
+
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        
+        
+        <!-- Bootstrap core CSS -->
+        <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        
+        <!-- Bootstrap Validator -->
+        <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.1.3/dist/bootstrap-validate.js" ></script>
+        
+         <script src="/js/popularActividade.js"></script>
+        <!-- Custom styles for this template -->
+        <link href="/css/startactivity.css" rel="stylesheet">
+        <link href="/css/transversal.css" rel="stylesheet">
+    
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico"/>
+
+          <!-- Fontes -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Chonburi');
+            @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+            @import url('https://fonts.googleapis.com/css?family=Passion+One');
+            @import url('https://fonts.googleapis.com/css?family=Muli');
+        </style>
+    </head>
+  <body>
+      <!-- Loading da página -->
+      
+        <div id="loader"></div>
+      <div style="display:none;" id="allPageActivity">
+ <!-- ***********************************************NAVBAR E TRALHA*************************************************** -->
+    <!-- Navigation -->
+
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand py-0" href="frontpage">  <img class="img-responsive" width="50px" height="" src="images/brain-logo-off.png"></a>
+            <p class="navbar-text text-uppercase">ImmersiveMind</p>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" style="z-index: 1" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span> </button>
+    
+              <!-- Aqui começam as opções do menu -->    
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                        <li class="dropdown">
+                            <a href="#" id="primeiroultimonome" class="dropdown-toggle textuser" data-toggle="dropdown">Olá, Ana Li <b class="caret"></b></a>
+                                <ul class="dropdown-menu dropdown-menu-right">
+                                    <li><a href="#" id="logout" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false">Logout <i class="fas fa-sign-out-alt"></i></a></li>
+                            </ul>
+                        </li>
+                </ul>
+            </div>
+        </nav>
+          
+          
+          <!-- Popup do LOGOUT -->
+        <div class="modal fade success-popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Sair de ImmersiveMind?</h4>
+                </div>
+                <div class="modal-body text-center">
+
+
+                    <img class="img-responsive center" width="100px" height="" src="images/brain-logo-off-inverted.png">
+                <p></p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <button data-dismiss="modal" class="btn btn-default btn-lg btn-block button-popup-success">Ficar :)</button> 
+                        </div>
+                        <div class="col-sm-6">
+                            <button data-dismiss="modal" onclick="Logout()" class="btn btn-default btn-lg btn-block button-popup-fail">Sair :(</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+          
+        <!--page Content --> 
+        <div class="container-fluid">
+    
+            <!-- BREADCRUMB-->
+            <div class="row" style="height: 50px; position:relative" >
+            
+                <div class="col-lg-6 col-md-7 col-sm-7 col-12" style="padding-left: 0px;">
+                    <div class="btn btn-default btn-arrow-right"><a href="frontpage" onclick="cleanSession()"><i class="fas fa-home bread"></i></a></div>
+                    <div id="gerirbread" class="btn btn-default btn-arrow-right"><a href="sessions" onclick="cleanSession()" class="bread">Gerir Sessões</a></div>
+                    <div class="btn btn-default btn-arrow-right"><a href="" class="bread">Actividade</a></div>
+                </div>
+    
+            <!-- Sessão X e Nome Utente -->
+                <div class="col-lg-6 col-md-5 col-sm-5 col-12 sessaoUtente" style="position:relative">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="SessaoUtenteX SessaoLinha">Sessão</p>
+                            <p id="sessaoX" class="SessaoLinha">- Nenhuma -</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="SessaoUtenteX UtenteLinha">Utente</p>
+                            <p id="utenteX" class="UtenteLinha">- Nenhum -</p>
+                        </div>
+                        </div>
+                </div>
+            </div>
+
+     <!-- Call to Action Well -->
+    <div class="subcontainer">
+        <!------------------------- AVISOS --------------------->
+      <div class="text-white bg-secondary avisos row">
+          <div class="col-lg-1 col-md-1 col-sm-1 col-1" style="padding-right: 0px; font-family: 'Muli'">
+          <img class="img-responsive imgaviso" width="50px" height="" src="images/warning-img-yellow.png" style="padding-bottom: 1px; padding-top: 1px;">
+              </div>
+          <div class="col-lg-11 col-md-11 col-sm-11 col-11" style="padding-left: 0px; padding-bottom: 8px; font-family: 'Muli'">
+          <p class='text_warning'><strong>Verifique, no máximo intervalo de 15 minutos, se o utilizador do óculos sente algum incómodo!</strong><strong class="hidden">Ajuste os óculos de acordo com a sua preferência.</strong></p>
+          </div>
+          
+          <script>
+          	$(document).ready(function() {
+
+		// run the fade() function every 2 seconds
+		setInterval(function(){
+			fade();
+		},7000);
+
+
+		// toggle between fadeIn and fadeOut with 0.3s fade duration.
+		function fade(){
+			$("strong").fadeToggle(1000);
+		}
+
+	});
+          </script>
+          
+          <style>
+          .hidden {
+    display:none;
+}
+strong {
+    position: absolute;
+    left:45px;
+    font-weight:normal;
+    
+}
+.text_warning {
+    
+    position:relative;
+}
+              
+              @media (max-width: 856px){
+                  .text_warning{
+                      font-size: 13px;
+                  }
+              }
+              
+              @media(max-width: 407px) {
+    .text_warning{
+        padding-bottom: 10px;
+        font-size: 10px;
+    }
+}
+          </style>
+         <!-- <marquee behavior="scroll" scrollamount="8" direction="left">Verifique, no máximo intervalo de 15 minutos, se o utilizador do óculos sente algum incómodo! &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ajuste os óculos de acordo com a sua preferência.</marquee>-->
+      </div>
+
+      <!-- Heading Row -->
+        
+        <!------------------------- VIDEO PLAY --------------------->
+      <div class="row my-4 row-eq-height" style="position:relative">
+        <div class="col-lg-6 col-sm-12" style="position:relative">
+            
+            <div class = "resp-container">
+                <div class="resp-iframe" id="iframes"></div>
+            
+            </div>
+        
+        </div>
+        
+        
+        <!-- /.col-lg-8 -->
+          
+          <!------------------------- CATEGORIAS --------------------->
+    <div class="col-lg-6 col-sm-12" style="padding-right:0px">
+        <div style="padding-top: 10px">
+            <ul class="nav nav-tabs" role="tablist" id="tabsCategorias"></ul>
+        </div>
+            
+            <!-- Tab panes -->
+        <!------------------------------- CAROUSEL ----------------------------->
+        <!-- Desenhado no popularActividade.js                                -->
+        <!------------------------------- !CAROUSEL ---------------------------->
+        <div class="tab-content" id="tab-content"></div>
+    </div>
+        <!-- /.col-md-4 -->
+      </div>
+      <!-- /.row -->
+
+ 
+      <!-- Content Row -->
+      <div class="row">
+        <div class="col-lg-8">
+            <!------------------------- SEARCH BAR --------------------->
+            <div class="input-group">
+                <input class="form-control py-2 border-right-0 border searchs" type="search" value="" id="search-input" placeholder="Procure vídeos aqui...">
+                <span class="input-group-append">
+                    <div class="input-group-text"><a onclick="search_list()"><i class="fa fa-search"></i></a></div>
+                </span>
+            </div>
+                    <!-- Para resultados da pesquisa -->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 resultzinhos">
+                <div id="results"></div>
+            </div>
+        </div>
+        </div>
+          <div class="col-lg-4 text-center botoezinhos">
+              <!------------------------ BOTÕES FINAIS ------------------->
+              <div class="row">
+                <div class="col-lg-6">
+                    <button id="btnGuardarTerminar" onclick="finalDate()" class="btn btn-block btn-primary btn-default" data-toggle="modal" data-target="#modalBalancoFinal">Guardar e Terminar</button>
+                </div>
+                <div class="col-lg-6">
+                    <button id="btnSairTerminar" data-toggle="modal" data-target="#sairActividade" class="btn btn-block btn-primary btn-default">Sair sem Terminar</button>
+                </div>
+            </div>
+          </div>
+           
+
+      </div>
+      <!-- /.row -->
+         <!-- Popup do SAIR -->
+        <div class="modal fade success-popup" id="sairActividade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Sair da Actividade?</h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>A saída implica que nenhum dado seja guardado.</p>
+                <p></p>
+                    <div class="row">
+                        <div class="col-sm-6">
+                           <button data-dismiss="modal" class="btn btn-default btn-lg btn-block button-popup-success">Ficar</button> 
+                        </div>
+                        <div class="col-sm-6">
+                            <button data-dismiss="modal" onclick="cleanSession();sairActividade()" class="btn btn-default btn-lg btn-block button-popup-fail">Sair</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+</div>
+            
+            <!------------------------- POPUP DO BALANÇO FINAL --------------------------->
+    <div class="modal fade popup-plus" id="modalBalancoFinal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h2 class="modal-title w-100 font-weight-bold modal-titulo" id="utente-titulo">Balanço Final</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+               
+                    <!------------------------------------------------------------------>
+                    <!--                        OBSERVACOES                           -->
+                    <!------------------------------------------------------------------>
+
+                <div class="modal-body" id="observacoesForm">
+                        <div class= "form-group">
+                            <div class="row">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-8" style="padding-left: 0px;">
+                                    <label for="" id="tempoid"><h4>Duração da Sessão</h4></label>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding-right: 0px; text-align: center">
+                                    <h4 id="difftime">00:00:00</h4>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group">
+                            <h4 id="estimulacao_cognitiva">Estimulação Cognitiva</h4>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Reconhecimento dos objectos visualizados:</label>
+                            <p class="small" style="color: red" id="recon">Obrigatório!</p>
+                            <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="reconhecimentoradio" id="1reconhecimento" value="1" required>1 <p>Nenhum objecto</p></label>
+                            <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="reconhecimentoradio" id="2reconhecimento" value="2" required>2</label>
+                            <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="reconhecimentoradio" id="3reconhecimento" value="3" required>3</label>
+                            <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="reconhecimentoradio" id="4reconhecimento" value="4" required>4</label>
+                            <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="reconhecimentoradio" id="5reconhecimento" value="5" required>5 <p>Todos os objectos</p></label>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Alterações de humor:</label>
+                            <p class="small" style="color: red" id="hum">Obrigatório!</p>
+                            <div class="row">
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="humorradio" id="1humor" value="1">1 <p>Muitas alterações</p></label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="humorradio" id="2humor" value="2">2</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="humorradio" id="3humor" value="3">3</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="humorradio" id="4humor" value="4">4</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="humorradio" id="5humor" value="5">5 <p>Sem alteração</p></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Interesse durante a sessão:</label>
+                            <p class="small" style="color: red" id="interesse">Obrigatório!</p>
+                            <div class="row">
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interesseradio" id="1interesse" value="1">1 <p>Sem interesse</p></label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interesseradio" id="2interesse" value="2">2</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interesseradio" id="3interesse" value="3">3</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interesseradio" id="4interesse" value="4">4</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interesseradio" id="5interesse" value="5">5 <p>Muito interessado</p></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Interacção entre o cuidador e o utente:</label>
+                             <p class="small" style="color: red" id="interaccao">Obrigatório!</p>
+                            <div class="row">
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interaccaoradio" id="1interesse" value="1">1<p>Nenhuma interacção</p></label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interaccaoradio" id="2interesse" value="2">2</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interaccaoradio" id="3interesse" value="3">3</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interaccaoradio" id="4interesse" value="4">4</label>
+                                <label class="radio-inline col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="radio" name="interaccaoradio" id="5interesse" value="5">5<p>Muita interacção</p></label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h4 id="estimulacao_cognitiva">Alterações Fisiológicas</h4>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Náuseas:</label>
+                             <p class="small" style="color: red" id="naus">Obrigatório!</p>
+                            <div class="row" style="text-align: center">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <label class="radio-inline"><input type="radio" name="nauseasradio" id="SimNauseas" value="1">Sim</label>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <label class="radio-inline"><input type="radio" name="nauseasradio" id="NaoNauseas" value="0">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Desequilíbrios:</label>
+                            <p class="small" style="color: red" id="deseq">Obrigatório!</p>
+                            <div class="row" style="text-align: center">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <label class="radio-inline"><input type="radio" name="desequilibriosradio" id="SimDesequilibrios" value="1">Sim</label>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                                    <label class="radio-inline"><input type="radio" name="desequilibriosradio" id="NaoDesequilibrios" value="0">Não</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label style="font-weight: bold">Perturbações visuais:</label>
+                            <p class="small" style="color: red" id="olhs">Obrigatório!</p>
+                            <div class="row">
+                                <label class="checkbox-inline checkbox-inline2 col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="checkbox" value="OlhosChorosos" id="OlhosChorosos" name="Olhos">Olhos chorosos</label>
+                                <label class="checkbox-inline checkbox-inline2 col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="checkbox" value="OlhosSecos" id="OlhosSecos" name="Olhos">Olhos secos</label>
+                                <label class="checkbox-inline checkbox-inline2 col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="checkbox" value="OlhosCansados" id="OlhosCansados" name="Olhos">Olhos doridos</label>
+                                <label class="checkbox-inline checkbox-inline2 col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="checkbox" value="OlhosCansados" id="OlhosCansados" name="Olhos">Olhos cansados</label>
+                                <label class="checkbox-inline checkbox-inline2 col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths"><input type="checkbox" value="Nada" id="OlhosNada" name="Olhos">Nada</label>
+                            </div>
+                        </div>
+                            
+                      <div class="form-group">
+                          <label style="font-weight: bold">Outras observações relevantes (opcional):</label>
+                            <textarea class="form-control" rows="3" id="ObservacoesRelevantes" placeholder="p.e.: O que gostou mais/menos"></textarea>
+                        </div>
+                </div>
+                        
+                        
+                        
+            <div class="modal-footer">
+                
+                <!-- Botões Adicionar/Guardar - Apagar - Terminar - Cancelar -->
+                <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6" id="botaoAdicionar">
+                           <button data-dismiss="modal" onclick="endSession()"class="btn btn-default btn-lg btn-block button-popup-success" id="saveandleave" disabled><i class="fas fa-save"></i> Guardar e Sair</button> 
+                        </div>
+                    
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-6" id="botaoCancelar">
+                            <button data-dismiss="modal" onclick="resetModalSessao()" class="btn btn-default btn-lg btn-block button-popup-fail" id="leave"><i class="fas fa-times-circle"></i> Cancelar</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <!-- /.container -->
+
+ </div>
+      <!-- /.Loading page -->
+  </body>
+
+</html>

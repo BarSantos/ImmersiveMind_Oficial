@@ -1,0 +1,236 @@
+body {
+   background: url(../images/memories_pink.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover ;
+}
+/* Coisas do título */
+
+header.masthead {
+  text-align: center;
+  color: white;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+header.masthead .intro-text {
+  padding-top: 240px;
+}
+
+header.masthead .intro-text .intro-lead-in {
+  font-size: 22px;
+  font-style: italic;
+  line-height: 22px;
+  margin-bottom: 0px;
+  font-family: 'Old Standard TT';
+}
+
+header.masthead .intro-text .intro-heading {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-bottom: 25px;
+  font-family: 'Chonburi';
+    color: #f5dbcf;
+    letter-spacing: 3px;
+}
+/* QUANDO A PAGINA E GRANDE, ISTO ACONTECE */
+@media (min-width: 768px) {
+  header.masthead .intro-text {
+    padding-top: 300px;
+    padding-bottom: 0px;
+  }
+  header.masthead .intro-text .intro-lead-in {
+    font-size: 40px;
+    font-style: italic;
+    line-height: 40px;
+    margin-bottom: 0px;
+    font-family: 'Old Standard TT';
+  }
+  header.masthead .intro-text .intro-heading {
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 75px;
+    margin-bottom: 50px;
+    font-family: 'Chonburi';
+      color: #f5dbcf;
+      letter-spacing: 3px;
+  }
+
+}
+
+/* Barra de cima transparente e talz */
+
+
+/******************** LOGIN ******************/
+
+#login-dp{
+    min-width: 250px;
+    padding: 14px 14px 0px;
+    overflow:hidden;
+    background-color:rgba(255,255,255,0.5);
+}
+#login-dp .help-block{
+    font-size:12px    
+}
+
+#login-dp .form-group {
+    margin-bottom: 10px;
+}
+#login-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+
+@media(max-width:768px){
+    #login-dp{
+        background-color: inherit;
+        color: #fff;
+        background-color:rgba(255,255,255,0.5);
+    }
+    #login-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+/******************** REGISTER ******************/
+
+#register-dp{
+    min-width: 250px;
+    padding: 14px 14px 0px;
+    overflow:hidden;
+    background-color:rgba(255,255,255,0.5);
+}
+#register-dp .help-block{
+    font-size:12px    
+}
+
+#register-dp .form-group {
+    margin-bottom: 10px;
+}
+
+#register-dp .bottom{
+    background-color:rgba(255,255,255,.8);
+    border-top:1px solid #ddd;
+    clear:both;
+    padding:14px;
+}
+
+
+@media(max-width:768px){
+    #register-dp{
+        background-color: inherit;
+        color: #fff;
+        background-color:rgba(255,255,255,0.5);
+    }
+    #register-dp .bottom{
+        background-color: inherit;
+        border-top:0 none;
+    }
+}
+
+/*** Remover a seta que fica ao lado do login e registar ***/
+.dropdown-toggle::after {
+    display:none;
+}
+
+/*
+.navbar > li > a{
+    color: #f5dbcf;
+    font-family: 'Muli';
+}
+*/
+
+/*Modifica a cor das letras na navbar */
+/*.nav.navbar.ml-auto li a{
+  color: #f5dbcf;
+    font-family: 'Muli';  
+}*/
+
+/****************** NAVBAR ****************/
+.navbar-nav li a{
+  color: #f5dbcf;
+    font-family: 'Muli';  
+}
+
+/* Mais espaço entre as opções do menu */
+.navbar-nav li{
+  padding-left:10px;
+  padding-right:10px;
+    color: #f5dbcf;
+}
+
+
+.navbar{
+    -webkit-box-shadow: 0 8px 20px -6px black;
+	   -moz-box-shadow: 0 8px 20px -6px black;
+	        box-shadow: 0 8px 20px -6px black;
+    margin: auto;
+    z-index: 10px;
+}
+.col-md-12 {
+    font-size: 12px;
+   color: #f5dbcf;
+    font-family: 'Muli';  
+}
+
+/* Modificar a cor do botão */
+.btn.btn-primary.btn-block {
+    background: #7e7e7e;
+    border: #7e7e7e;
+}
+
+.btn.btn-primary.btn-block:hover {
+    background: #f5dbcf;
+    color: #3f3f3f;
+    border: #f5dbcf;
+}
+
+/* css para o popup do registo */
+.success-popup  {
+    transition: .3s ease all;
+    font-family: 'Muli';
+    color: #7e7e7e;
+}
+
+/************FOOTER**********/
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+/********************* BOTOES POPUP ************************/
+
+.button-popup-success {
+    background: #009b00;
+    border: #009b00; 
+    color: white;
+}
+
+.button-popup-success:hover {
+    background: #ccff90;
+    border: #ccff90;
+    color: #3f3f3f;
+}
+.button-popup-fail {
+    background: #d60000;
+    border: #d60000; 
+    color: white;
+}
+
+.button-popup-fail:hover {
+    background: #ff6666;
+    border: #ff6666;
+    color: white;
+}

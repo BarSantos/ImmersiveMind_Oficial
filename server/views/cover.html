@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ImmersiveMind</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/server.js"></script>
+      
+          
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+      
+    <!-- Bootstrap Validator -->
+    <script src="https://cdn.rawgit.com/PascaleBeier/bootstrap-validate/v2.1.3/dist/bootstrap-validate.js" ></script>
+
+    <!-- Custom styles for this template -->
+    <link href="/css/cover.css" rel="stylesheet">
+      
+      <!-- Font Awesome -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+      
+      <!-- Favicon -->
+      <link rel="shortcut icon" href="images/favicon.ico"/>
+      
+      <!-- Fontes -->
+	<style>
+	@import url('https://fonts.googleapis.com/css?family=Chonburi');
+    @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT');
+    @import url('https://fonts.googleapis.com/css?family=Passion+One');
+    @import url('https://fonts.googleapis.com/css?family=Muli');
+	</style>
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand py-0" href="/">  <img class="img-responsive" width="50px" height="" src="images/brain-logo-off.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span> </button>
+
+      <!-- Aqui começam as opções do menu -->    
+          
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+         
+         
+            
+          
+                 <!-- ESTE É PARA O LOGIN -->
+            <li class="dropdown nav-item py-0">
+              <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="fas fa-sign-in-alt"></i> Login</a>
+                <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                         <div class="row">
+                                <div class="col-md-12">
+                                    Vamos começar?
+                                    <p>Faça primeiro o seu login:</p>
+
+                                     <form class="form" role="form" method="get" action="" accept-charset="UTF-8" id="loginnav">
+                                            <div class="form-group">
+                                                 <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                 <input type="email" class="form-control" id="emaillogin" placeholder="Endereço Electrónico">
+                                            </div>
+                                            <script>bootstrapValidate('#emaillogin', 'email:Introduza um email válido!');</script>
+                                         
+                                            <div class="form-group">
+                                                 <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                 <input type="password" class="form-control" id="passwordlogin" placeholder="Palavra-passe">
+                                                <!-- Isto pode ser para um futuro -->
+                                                 <!--<div class="help-block text-right"><a href="">Forget the password ?</a></div>-->
+                                            </div>
+                                            <script>bootstrapValidate('#passwordlogin', 'required:Preencha este campo!');</script>
+                                         
+                                            <div class="form-group">
+                                                 <button type="button" onclick="LoginCuidador()" class="btn btn-primary btn-block" data-target="#myModal" data-backdrop="static" data-keyboard="false" id="buttonlogin" disabled="true">Começar!</button>
+                                            </div>
+                                     </form> 
+                                </div>
+                         </div>
+                    </li>
+                </ul>
+            </li>
+                 <!-- ESTE É PARA O REGISTAR -->
+             <li class="dropdown nav-item py-0">
+                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><i class="fas fa-user-circle"></i> Registe-se</a>
+                    <ul id="register-dp" class="dropdown-menu">
+                        <li>
+                             <div class="row">
+                                    <div class="col-md-12">
+                                        Para usar a plataforma,
+                                        <p>registe-se primeiro!</p>
+
+                                         <form class="form" id="registernav" role="form">
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputEmail2">Email</label>
+                                                     <input type="email" class="form-control" id="emailregistar" placeholder="Endereço Electrónico">
+                                                </div>
+                                                <script>bootstrapValidate('#emailregistar', 'email:Introduza um email válido!');</script>
+
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleFirstName">Primeiro Nome</label>
+                                                    <input type="text" class="form-control" id="primeironomecuidador" placeholder="Primeiro nome">
+                                                </div>
+                                                <script>bootstrapValidate('#primeironomecuidador', 'min:2:Introduza um nome válido!');</script>
+                                             
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleLastName">Último Nome</label>
+                                                    <input type="text" class="form-control" id="ultimonomecuidador" placeholder="Último Nome">
+                                                </div>
+                                                <script>bootstrapValidate('#ultimonomecuidador', 'min:2:Introduza um nome válido!');</script>
+                                             
+                                                <div class="form-group">
+                                                    <label class="sr-only" for="exampleProfissao">Profissão</label>
+                                                    <input type="text" class="form-control" id="profissao" placeholder="Profissão">
+                                                </div>
+                                                <script>bootstrapValidate('#ultimonomecuidador', 'min:2:Introduza um nome válido!');</script>
+                                             
+                                                <div class="form-group">
+                                                     <label class="sr-only" for="exampleInputPassword2">Password</label>
+                                                     <input type="password" class="form-control" id="passwordregistar" placeholder="Palavra-passe">
+                                                    <!-- Isto pode ser para um futuro -->
+                                                     <!--<div class="help-block text-right"><a href="">Forget the password ?</a></div>-->
+                                                </div>
+                                                <script>bootstrapValidate('#passwordregistar', 'regex:^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$:A palavra-passe deve conter pelo menos uma letra e um número!');</script>
+                                             
+                                                <div class="form-group">
+                                                     <button type="button" onclick="RegistaCuidador()" class="btn btn-primary btn-block" data-toggle="modal" data-target="#myModal" data-backdrop="static" data-keyboard="false" id="buttonregistar" disabled="true">Registar!</button>
+                                                </div>
+                                         </form>
+                                    </div>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre o Projecto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+      
+      <!-- Popup do registo -->
+    <div class="modal fade success-popup" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+             <img id="img-registo" class="img-responsive" width="80px" height="" src="images/SmileFaceFail.png" >
+              <p id="msnregisto" class="lead">Oops, aconteceu algum problema!</p>
+              <button data-dismiss="modal" class="btn btn-default btn-lg button-popup-fail" id="btnpopupregisto">Tente outra vez</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+   
+    <header class="masthead">
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-lead-in">Bem-vindo(a) à nossa plataforma!</div>
+          <div class="intro-heading text-uppercase">ImmersiveMind</div>
+        </div>
+      </div>
+    </header>
+     
+  </body>
+
+</html>

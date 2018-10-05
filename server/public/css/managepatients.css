@@ -1,0 +1,139 @@
+h3 {
+    margin-bottom: 0px !important;
+    font-family: 'Muli';
+    color: #f5dbcf;
+}
+
+h3:hover{
+    color: #f9ebe4;
+}
+.bolinhas_utentes:hover{
+    text-decoration: none !important;
+}
+
+
+.bolitas{
+    background-color: white !important;
+    width:200px; 
+    height:200px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top center;
+    -webkit-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+}
+
+.bolitas:hover{
+    text-decoration: none !important;
+    -webkit-filter: brightness(110%);
+}
+
+.bolitas_plus{
+    background-image:url(../images/plus_sign_cool.png);
+    width:200px; 
+    height:200px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top center;
+    -webkit-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    -moz-box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+    box-shadow: 5px 5px 17px 1px rgba(0,0,0,0.7);
+}
+
+
+.bolitas_plus:hover{
+    /*background-image:url('../images/plus_sign_cool_pressed.png');*/
+    -webkit-filter: brightness(110%);
+}
+
+/*********************** popup do plus **************************/
+.modal-titulo{
+    font-family: 'Muli';
+    color: #7e7e7e;
+}
+
+.modal-body{
+    font-family: 'Muli';
+}
+
+/*****************************Opção Procurar *********************/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background: #7e7e7e;
+    border: #7e7e7e;
+    color: white;
+}
+
+.btn-file:hover {
+    background: #f5dbcf;
+    color: #3f3f3f;
+    border: #f5dbcf;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.box-img{
+    background: rgba(255,255,255,0) !important;
+}
+
+.btn-add {
+    position: relative;
+    overflow: hidden;
+    background: #7e7e7e;
+    border: #7e7e7e;
+    color: white;
+}
+
+.btn-add:hover {
+    background: #f5dbcf;
+    color: #3f3f3f;
+    border: #f5dbcf;
+}
+
+/**** Preview da imagem no novo utente *****/
+.bolita_preview{
+    width:200px !important; 
+    height:200px !important;
+    background-position:50% 50% !important;
+    background-repeat:no-repeat !important;
+    background-size: cover !important;
+    background-position: top center !important;
+}
+
+/****** Modificação do Modal ******/
+.modal-header
+ {
+     padding:9px 15px;
+     border-bottom:0px solid #3f3f3f;
+     background-color: #f5dbcf;
+ }
+
+.modal-title{
+    text-align: center;
+}
+ .modal-header .close{
+    position: inherit;
+}
+
+.modal-footer{
+    border-top: 1px solid #7e7e7e;
+}
+

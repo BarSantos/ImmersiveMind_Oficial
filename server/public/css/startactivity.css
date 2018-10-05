@@ -1,0 +1,574 @@
+.nav-tabs li{
+    width: 20%;
+}
+
+/******* Modificação dos Tabs das Categorias *********/
+
+.nav-tabs{
+  background-color: #3f3f3f;
+    font-family: 'Muli';
+    font-size: 13px;
+    display: flex;
+    text-align:center;
+    
+}
+
+.nav-tabs:active{
+    background-color: white;
+    color: #3f3f3f;
+}
+
+.tab-content{
+    background-color:white;
+    color: ##3f3f3f;
+    padding:5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Muli';
+}
+
+.nav-tabs > li{
+    display: flex;
+    flex: 1;
+}
+.nav-tabs > li > a{
+    border: medium none;
+    color: white !important;
+    background-color: #7e7e7e;
+    text-decoration: none !important;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-top: 0.5px solid #ededed !important;
+    border-left: 0.5px solid #ededed !important;
+    border-right: 0.5px solid #ededed !important;
+}
+
+.nav-tabs > li > a.active{
+    color: #3f3f3f !important;
+}
+
+.nav-tabs > li > a.active:hover{
+    background-color:  white !important;
+    border: none !important;
+}
+
+.nav-tabs > li > a:hover{
+  background-color: #a4a4a4 !important;
+    border: none;
+    color:#fff;
+}
+
+.nav-link{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+/***** Avisos *******/
+
+.texto-aviso{
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: 'Muli';
+}
+.sinal-aviso{
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    border-radius: 5px;
+}
+
+marquee{
+ /*   margin-top: 10px;*/
+}
+
+.avisos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/********** iFrame ***************/
+
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+
+.resp-iframe {
+    padding-top: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/******* Média **************/
+
+@media (max-width: 640px) {
+    .nav-tabs{
+        font-size: 12px;
+    }
+    .bread{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 375px) {
+    .bread{
+        font-size: 13px;
+    }
+    .btn-arrow-right {
+        padding-left: 22px !important;
+        padding-right: 15px !important;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .nav-tabs{
+        font-size: 10px;
+    }
+    .bread{
+        font-size: 13px;
+    }
+    .btn-arrow-right {
+        padding-left: 22px !important;
+        padding-right: 15px !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .bread{
+        font-size: 10px;
+    }
+    .btn-arrow-right {
+        padding-left: 22px !important;
+        padding-right: 15px !important;
+    }
+}
+
+
+/*********** Sessão e Utente *************/
+.sessaoUtente{
+    color: #f5dbcf;
+    font-family: 'Muli';
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 15px !important;
+    text-align: right;
+}
+
+.UtenteLinha{
+    display: inline-block !important;
+}
+
+.SessaoLinha{
+    display: inline-block !important;
+    margin-bottom: 0px;
+}
+
+.SessaoUtenteX{
+    color: white;
+    font-size: 15px;
+    width: 70px !important;
+}
+
+@media (max-width: 991px) {
+    
+    .SessaoUtenteX.SessaoLinha{
+        text-align: right !important;
+    }
+    .UtenteLinha{
+        font-size: 12px !important;
+    }
+    .SessaoLinha{
+        font-size: 12px !important;
+    }
+    
+    .SessaoUtenteX.SessaoLinha{
+        font-size: 12px !important;
+    }
+    .SessaoUtenteX.UtenteLinha{
+        font-size: 12px !important;
+    }
+    
+    .bread{
+        font-size: 13px;
+    }
+}
+
+
+
+@media (max-width: 702px) {
+     .UtenteLinha{
+        font-size: 9px !important;
+    }
+    .SessaoLinha{
+        font-size: 9px !important;
+    }
+    
+    .SessaoUtenteX.SessaoLinha{
+        font-size: 9px !important;
+        width: 40px !important;
+    }
+    .SessaoUtenteX.UtenteLinha{
+        font-size: 9px !important;
+        width: 40px !important;
+    }
+    
+    .bread{
+        font-size: 10px;
+    }
+    
+}
+
+@media(max-width: 575px) {
+    .subcontainer{
+        padding-top: 50px;
+    }
+    .sessaoUtente{
+        text-align: left;
+        padding-left: 0px;
+        height: 15px !important;
+        margin-top: 0px;
+    }
+     .SessaoUtenteX.SessaoLinha{
+        text-align: left !important;
+    }
+    .avisos{
+        font-size: 10px;
+        height: 49px;
+    }
+    .imgaviso{
+        height: 45px;
+        width: 46px;
+    }
+    .text_warning{
+        padding-bottom: 10px;
+    }
+  
+}
+
+@media(max-width: 407px) {
+    .text_warning{
+        padding-bottom: 10px;
+        font-size: 10px;
+    }
+}
+
+   
+/********** Barra de Search **************/
+/* hide the blue outline */
+.form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
+}
+.searchs{
+    font-family: 'Muli';
+}
+.input-group-text:hover{
+    background-color: #f5dbcf;
+    color: #7e7e7e;
+}
+
+.input-group-text{
+    background-color: #7e7e7e;
+    color: white;
+}
+
+/************ Butões Guardar/Sair Terminar *******/
+
+#btnGuardarTerminar,
+#btnSairTerminar{
+    font-family: 'Muli';
+    display: inline-block;
+    vertical-align: top;
+    border-color: transparent;
+}
+
+#btnGuardarTerminar{
+    background-color: #009b00;
+}
+#btnSairTerminar{
+    background-color: #d60000;
+}
+
+#btnGuardarTerminar:hover{
+    background-color: #006c00;
+}
+#btnSairTerminar:hover{
+    background-color: #950000;
+}
+
+@media (max-width: 1024px) {
+   #btnGuardarTerminar,
+#btnSairTerminar{
+    font-size: 10px;
+    } 
+}
+
+@media (max-width: 768px) {
+   #btnGuardarTerminar,
+#btnSairTerminar{
+    font-size: 15px;
+    } 
+}
+
+/********** Caracteristicas da Thumbnail ********/
+
+.tab-pane{
+    padding-top: 10px;
+}
+
+
+.thumbnail_image{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-control-prev-icon{
+     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon{
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+li.slidecolor{
+    background-color: #b1b1b1;
+}
+li.slidecolor.active{
+    background-color: #3f3f3f;
+}
+
+.carousel-item-yt{
+    width: auto;
+    height: 250px;
+    /*max-height: 285px;*/
+    text-align: center;
+}
+
+/************ Coisas do Search ************/
+#results{
+    background-color: #7e7e7e;
+    margin-bottom:10px;
+    width: 154.5%;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.item{
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 12px;
+    margin-left: 12px;
+    text-align: center;
+}
+
+.thumbnail_search{
+    width: 200px;
+    height: 144px;
+    max-height: 360px;
+    max-width: 480px;
+}
+
+.botoezinhos{
+    padding-right: 0px;
+    height: 50px;
+}
+
+.resultzinhos{
+    padding-left: 0px;
+}
+
+.titlesearch{
+    color: white;
+    padding:5px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Muli';
+    max-width: 200px;
+}
+
+
+/*********************** OBSERVAÇÕES *************************/
+
+input[type=radio] {
+    display: block;
+    margin: 0 auto; 
+}
+
+label {
+    display: inline-block;
+}
+                        
+.radio-inline{
+    text-align: center;
+    font-size: 15px;
+}
+.checkbox-inline{
+    text-align: center;
+    font-size: 15px;
+}
+                        
+                        
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+.col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+/*** Tamanhos das letras ***/
+
+@media (max-width: 495px){
+    #ObservacoesRelevantes{
+        font-size: 12px;
+    }
+    .checkbox-inline2{
+        font-size: 12px;
+    }
+    .radio-inline{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 375px){
+    #ObservacoesRelevantes{
+        font-size: 10px;
+    }
+    .checkbox-inline2{
+        font-size: 10px;
+    }
+    .radio-inline{
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 379px){
+    #dados-sessao{
+        font-size: 14px;
+    }
+    #obs-sessao{
+        font-size: 14px;
+    }
+}
+
+/***** Tab Balanço final *****/
+.disabled {
+    pointer-events:none; /*This makes it not clickable*/
+    opacity:0.6;         /*This grays it out to look disabled*/
+}
+
+/********* Na procura de videos **********/
+
+@media (max-width: 768px){
+    .textsmaller{
+        font-size: 14px;
+    }
+}
+
+/************* Btao procurar *********/
+
+.input-group-text{
+    background-color: #7e7e7e;
+    color: white;
+    
+}
+.input-group-text:hover{
+    background-color: #f5dbcf;
+    color: #7e7e7e;
+    -o-transition:.3s;
+  -ms-transition:.3s;
+  -moz-transition:.3s;
+  -webkit-transition:.3s;
+  /* ...and now for the proper property */
+  transition:.3s;
+}
+
+
+.modal-titulo{
+    font-family: 'Muli';
+    color: #7e7e7e;
+}
+
+.modal-body{
+    font-family: 'Muli';
+}
+
+.modal-header
+ {
+     padding:9px 15px;
+     border-bottom:0px solid #3f3f3f;
+     background-color: #f5dbcf;
+ }
+
+.modal-title{
+    text-align: center !important;
+}
+ .modal-header .close{
+    position: inherit;
+}
+
+.modal-footer{
+    border-top: 1px solid #7e7e7e;
+    display: block;
+}
+
+@media (max-width: 466px){
+    #saveandleave{
+        font-size: 12px;
+    }
+    #leave{
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 345px){
+    #saveandleave{
+        font-size: 11px;
+    }
+    #leave{
+        font-size: 11px;
+    }
+}
