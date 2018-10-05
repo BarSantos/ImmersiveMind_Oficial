@@ -102,6 +102,8 @@ function endSession()
         AddEmptySession();
        
     }
+    
+    cleanSession();
 }
 
 function AddEmptySession(){

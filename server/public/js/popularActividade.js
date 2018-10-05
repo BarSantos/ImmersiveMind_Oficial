@@ -39,7 +39,7 @@ function startYTPlayer()  {
 
 function sairActividade()
 {
-    window.sessionStorage.removeItem("sessaoID");
+    cleanSession();
     window.location = "/frontpage";
 }
 
