@@ -744,7 +744,7 @@ function saveVideo( videoid, titulo)
 function checkVideos()
 {
   $('.vidInput').each(function(i, obj) {
-        savedVideos.forEach(function(element) {
+        savedVideosArray.forEach(function(element) {
             if(element.videoid == obj.getAttribute('id'))
                 obj.innerHTML = '::after';     
         });
