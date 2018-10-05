@@ -740,16 +740,6 @@ function saveVideo( videoid, titulo)
     
     savedVideosArray.push(video);
 }
-
-function checkVideos()
-{
-  $('.vidInput').each(function(i, obj) {
-        savedVideosArray.forEach(function(element) {
-            if(element.videoid == obj.getAttribute('id'))
-                obj.innerHTML = '::after';     
-        });
-    });
-}
    
 function displaySavedVideos()
 {
