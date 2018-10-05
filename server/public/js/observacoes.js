@@ -100,10 +100,7 @@ function endSession()
     else
     {
         AddEmptySession();
-       
     }
-    
-    cleanSession();
 }
 
 function AddEmptySession(){
