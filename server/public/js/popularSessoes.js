@@ -746,7 +746,7 @@ function checkVideos()
   $('.vidInput').each(function(i, obj) {
         savedVideos.forEach(function(element) {
             if(element.videoid == obj.getAttribute('id'))
-                obj.checked = true;     
+                obj.innerHTML = '::after';     
         });
     });
 }
